@@ -1,36 +1,79 @@
-# This is a basic workflow to help you get started with Actions
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Discord</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #36393f;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
 
-name: CI
+        header {
+            background-color: #7289da;
+            padding: 20px;
+            text-align: center;
+        }
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+        h1 {
+            margin: 0;
+        }
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+        p {
+            margin-top: 5px;
+            font-size: 18px;
+        }
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+        main {
+            padding: 20px;
+            text-align: center;
+        }
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+        button {
+            background-color: #7289da;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+        button:hover {
+            background-color: #677bc4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Site Discord</h1>
+        <p>サイトへようこそ</p> <!-- Bem-vindo ao site em japonês -->
+    </header>
+    <main>
+        <button id="botao">Clique aqui!</button>
+        <div id="mensagem">
+            <!-- Texto para Milena -->
+            <p>Querida Milena,</p>
+            <p>É difícil expressar em palavras o quão grato eu sou por ter você como minha melhor amiga. Desde o momento em que nos conhecemos, nossa amizade floresceu e se fortaleceu, tornando cada dia mais especial e cheio de momentos inesquecíveis.</p>
+            <p>Você é a luz nos meus dias mais sombrios, trazendo alegria e positividade para cada situação. Sua presença é reconfortante, e sua capacidade de me entender sem que eu precise dizer uma palavra é verdadeiramente especial.</p>
+            <p>Milena, você é mais do que uma amiga para mim; você é uma irmã de coração. Compartilhamos risos, lágrimas, sonhos e conquistas, e sei que posso sempre contar com você, não importa o que aconteça.</p>
+            <p>Suas qualidades únicas, sua gentileza, sua determinação e seu coração generoso são fontes de inspiração para mim, e sou incrivelmente grato por tê-la em minha vida.</p>
+            <p>Que nossa amizade continue a crescer e florescer, enchendo nossas vidas com amor, risadas e memórias preciosas.</p>
+            <p>Com todo o meu carinho e gratidão,</p>
+            <p>[Seu nome]</p>
+        </div>
+    </main>
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+    <script>
+        document.getElementById('botao').addEventListener('click', function() {
+            var mensagem = document.getElementById('mensagem');
+            mensagem.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
